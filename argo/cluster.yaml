@@ -14,3 +14,7 @@ spec:
     path: cluster
     repoURL: https://github.com/salesforce-cdc-demo/cdc-gitops.git
     targetRevision: main
+  syncPolicy:
+     automated:
+       prune: false
+       selfHeal: true
