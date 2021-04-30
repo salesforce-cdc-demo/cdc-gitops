@@ -13,4 +13,4 @@ spec:
       recurse: true
     path: cluster
     repoURL: https://github.com/salesforce-cdc-demo/cdc-gitops.git
-    targetRevision: HEAD
+    targetRevision: main
