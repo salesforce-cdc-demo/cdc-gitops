@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cdc-salesforce
+  namespace: cdc-salesforce
+spec:
+  destination:
+    namespace: cdc-salesforce
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    directory:
+      recurse: true
+    path: app
+    repoURL: https://github.com/salesforce-cdc-demo/cdc-gitops.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
